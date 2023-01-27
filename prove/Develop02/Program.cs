@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 
 class Program
 {
@@ -8,11 +9,21 @@ class Program
         
         int initiateCodes = 1;
 
+         
+
         string activeEntry = "";
         string currentDateTime = "";
 
+        List<string> storeCurrentEntry = new List<string>();
 
-        while (initiateCodes == 1) {
+        Name systemDate = new Name();
+        Entry userInput = new Entry();
+        
+
+
+        while (initiateCodes == 1) 
+        {
+            Console.WriteLine();
             Console.WriteLine("Welcome to the Journal Program!");
             Console.WriteLine("Please select on e of the following choices: ");
             Console.WriteLine("1. Write");
@@ -21,25 +32,40 @@ class Program
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
             Console.Write("What would you like to do? ");
-
-            string strUserChoice = Console.ReadLine();
-
+            string strUserChoice = Console.ReadLine(); 
             int userChoice = int.Parse(strUserChoice);
+            Console.WriteLine();
+
+
+            
 
             if (userChoice == 1) {
-                Name systemDate = new Name();
+                storeCurrentEntry.Clear();
+                // Display and assign Current Date
                 Console.Write("Current Date: ");
                 systemDate.displayDateTime();
-                Entry userInput = new Entry();
                 Console.WriteLine();
-                string activeDate = userInput._currentDate=systemDate.dateText;
-                currentDateTime = activeDate;
-                userInput.promptGenerator();
+                string activeDate = userInput._currentDate=systemDate._dateTime;
+                storeCurrentEntry.Add(activeDate);
+                currentDateTime = activeDate; //
+
+                //Display generated prompt question and answer
+                string promptQuestion = userInput.promptGenerator();
+                storeCurrentEntry.Add(promptQuestion);
+                Console.WriteLine(promptQuestion);
                 Console.WriteLine();
                 string userAnswer = Console.ReadLine();
-                activeEntry = userAnswer;
+                storeCurrentEntry.Add(userAnswer);
+                activeEntry = userAnswer; //
+
+                //Automatically Saves a file to a "myFile.txt" if it doesn't exist the first time the loads.
+                if (!File.Exists("myFile.txt"))
+                {
+                    userInput.savetoFile(storeCurrentEntry);
+                }
+                //Notify user to save progress
                 Console.WriteLine();
-                Console.WriteLine("Your content for today is stored. Don't forget to save your progress.");
+                Console.WriteLine("Please don't forget to save your progress");//
             }
 
             else if (userChoice == 2) {
@@ -52,18 +78,38 @@ class Program
             }
 
             else if (userChoice == 4) {
+                //Notify User for saving
+                Journal userRead = new Journal();
                 Console.WriteLine("Do you want to save your current progress?");
                 Console.Write("Yes / No? ");
-                string saveUserChoice = Console.ReadLine();
+                string _userSaveChoice_ = Console.ReadLine(); 
+                string userSaveChoice = _userSaveChoice_.ToLower();//
 
-                if(saveUserChoice == "Yes") {
-                    Entry saveFile = new Entry();
-                    saveFile.savetoFile(activeEntry, currentDateTime);
-                }
-            }
+                // if (userSaveChoice == "yes") {
+                //     //Notify user if wanted to make filename as current Date Time or Custom
+                //     Console.WriteLine("Do you want the current Date and Time to be the file name? ");
+                //     Console.Write("Yes / No? ");
+
+                //     string _userFileNameDefine_ = Console.ReadLine();
+                //     string userFileNameDefine = _userFileNameDefine_.ToLower();
+                    // if (userFileNameDefine == "yes")
+                    // {
+                    //     userInput._fileName = systemDate._dateDayYear;
+                    //     Journal._fileName = systemDate._dateDayYear;
+                    // } 
+                    // else if (userFileNameDefine == "no")
+                    // {
+                    //     Console.Write("What is your preferred filename? ");
+                    //     string preferredFileName = Console.ReadLine();
+                    //     userInput._fileName = preferredFileName;
+                    // }//
+
+                    userInput.savetoFile(storeCurrentEntry);
+                    }
+                
 
             else if (userChoice == 5) {
-                initiateCodes = 0;
+            initiateCodes = 0;
             }
         }
 
