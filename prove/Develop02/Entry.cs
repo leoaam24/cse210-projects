@@ -3,10 +3,13 @@ using System.Collections.Generic;
 
 public class Entry 
 {
-    public string _fileName = "myFile.txt";
+    public static string _fileName = "";
 
 
     public string _currentDate = "";
+
+    public List<string> journalEntries = new List<string>();
+
 
     
     static string [] prompts = {
@@ -23,7 +26,7 @@ public class Entry
     public List<Entry> _entryStorage = new List<Entry>();
 
     static Random random = new Random();
-    static int index = random.Next(_promptList.Count);
+    
 
     public Entry()
     {
@@ -32,6 +35,7 @@ public class Entry
     
     public string promptGenerator()
     {
+        int index = random.Next(_promptList.Count);
         return (_promptList[index]);
     }
 
@@ -46,12 +50,24 @@ public class Entry
             outputfile.WriteLine(promptQuestion);
             outputfile.WriteLine(userEntry);
             outputfile.WriteLine();
+            journalEntries.Add(_fileName);
+            
+
+        }
+
+         using (StreamWriter outputfile = new StreamWriter("allentry.csv", true))
+        {
+            string date = storeCurrentEntry[0];
+            string promptQuestion = storeCurrentEntry[1];
+            string userEntry = storeCurrentEntry[2];
+            outputfile.WriteLine(date);
+            outputfile.WriteLine(promptQuestion);
+            outputfile.WriteLine(userEntry);
+            outputfile.WriteLine();
+            
 
         }
     }
-
-    
-    
 
 }
 
