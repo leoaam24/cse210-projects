@@ -6,7 +6,5 @@ class Program
     {
         Console.WriteLine("Hello World!");
         Console.WriteLine("This is in C#.");
-
-        int number = 5; 
     }
 }
