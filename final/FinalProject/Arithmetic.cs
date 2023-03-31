@@ -1,27 +1,62 @@
 public class Arithmetic : Calculation
 {
-    public override void Calculate()
+    private int _userChoice;
+    List<string> optionAvailable = new List<string>();
+
+    public Arithmetic() : base()
     {
+        optionAvailable.Add("Add");
+        optionAvailable.Add("Subtract");
+        optionAvailable.Add("Multiply");
+        optionAvailable.Add("Divide");
+        setUserChoice(CalculateList(optionAvailable));
     }
 
-    public double Add()
+    public void DisplayResult(int selection, double answer)
     {
-        return 0;
+        if (selection == 1)
+        {
+            Console.WriteLine($"The Sum of the two numbers is: {answer}");
+        }
+        else if (selection == 2)
+        {
+            Console.WriteLine($"The difference of the two numbers is: {answer}");
+        }
+        else if (selection == 3)
+        {
+            Console.WriteLine($"The Product of the two numbers is {answer}");
+        }
+        else if (selection == 4)
+        {
+            Console.WriteLine($"The Quotient of the two numbers is: {answer}");
+        }
+        else
+        {
+            Console.WriteLine("Nothing to do here");
+        }
+        
+        Console.Write("Please enter to continue...");
+        Console.ReadLine();
     }
 
-    public double Subtract()
+
+    
+
+    public void setUserChoice(int data)
     {
-        return 0;
+        _userChoice = data;
     }
 
-    public double Multiply()
+    public List<string> getOptionList()
     {
-        return 0;
+        return optionAvailable;
     }
 
-    public double Divide()
+    public int getUserChoice()
     {
-        return 0;
+        return _userChoice;
     }
+
+   
 
 }

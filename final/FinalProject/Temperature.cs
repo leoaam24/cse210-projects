@@ -56,34 +56,34 @@ public class Temperature : Conversion
     }
 
 
-    public double ConvertCtoF()
+    public double ConvertCtoF(double Celsius)
     {
-        return ((_Celsius)*1.8) + 32;  
+        return ((Celsius)*1.8) + 32;  
     }
 
-    public double ConvertCtoK()
+    public double ConvertCtoK(double Celsius)
     {
-        return ((_Celsius) + 273.15);
+        return ((Celsius) + 273.15);
     }
 
-    public double ConvertFtoC()
+    public double ConvertFtoC(double Fahrenheit)
     {
-        return ((_Fahrenheit - 32)* 5/9);
+        return ((Fahrenheit - 32)* 5/9);
     }
 
-    public double ConvertFtoK()
+    public double ConvertFtoK(double Fahrenheit)
     {
-        return (((_Fahrenheit) + 459.67)*5/9);
+        return (((Fahrenheit) + 459.67)*5/9);
     }
 
-    public double ConvertKtoC()
+    public double ConvertKtoC(double Kelvin)
     {
-        return (_Kelvin - 273.15);
+        return (Kelvin - 273.15);
     }
 
-    public double ConvertKtoF()
+    public double ConvertKtoF(double Kelvin)
     {
-        double celsius = _Kelvin - 273.15;
+        double celsius = Kelvin - 273.15;
         return (celsius * 9/5) + 32;
 
     }

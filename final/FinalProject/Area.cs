@@ -10,10 +10,10 @@ public class Area : Conversion
 
     public Area() : base()
     {
-        AUnitList.Add("SquareM");
-        AUnitList.Add("SquareFt");
-        AUnitList.Add("Hectars");
-        AUnitList.Add("SqYards");
+        AUnitList.Add("Square Meter");
+        AUnitList.Add("Square Foot");
+        AUnitList.Add("Hectare");
+        AUnitList.Add("Square Yard");
 
 
     }
@@ -84,63 +84,63 @@ public class Area : Conversion
         return AUnitList;
     }
 
-    public double ConvertSqmToSqft()
+    public double ConvertSqmToSqft(double SquareM)
     {
-        return (_SquareM * 10.7639);
+        return (SquareM * 10.7639);
     }
 
-    public double ConvertsqmTohectar()
+    public double ConvertsqmTohectar(double SquareM)
     {
-        return _SquareM / 10000;
+        return SquareM / 10000;
     }
 
-    public double ConvertsqmTosqyrds()
+    public double ConvertsqmTosqyrds(double SquareM)
     {
-        return _SquareM * 1.19599;
+        return SquareM * 1.19599;
     }
 
-    public double ConvertsqftTosqm()
+    public double ConvertsqftTosqm(double SquareFt)
     {
-        return _SquareFt * 0.092903;
+        return SquareFt * 0.092903;
     }
 
-    public double Convertsqfttohectar()
+    public double Convertsqfttohectar(double SquareFt)
     {
-        return _SquareFt * 0.0000092903;
+        return SquareFt * 0.0000092903;
     }
 
-    public double ConvertsqftTosqyrds()
+    public double ConvertsqftTosqyrds(double SquareFt)
     {
-        return _SquareFt / 9;
+        return SquareFt / 9;
     }
-    public double ConverthectarTosqm()
+    public double ConverthectarTosqm(double Hectares)
     {
-        return _Hectares * 10000;
-    }
-
-    public double ConverthectarTosqft()
-    {
-        return _Hectares * 107639.1;
+        return Hectares * 10000;
     }
 
-    public double ConverthectarTosqyrds()
+    public double ConverthectarTosqft(double Hectares)
     {
-        return _Hectares * 11959.9;
+        return Hectares * 107639.1;
     }
 
-    public double ConvertsqyrdsTosqm()
+    public double ConverthectarTosqyrds(double Hectares)
     {
-        return _SqYards * 0.836127;
+        return Hectares * 11959.9;
     }
 
-    public double ConvertsqyrdsTosqft()
+    public double ConvertsqyrdsTosqm(double SqYards)
     {
-        return _SqYards * 9;
+        return SqYards * 0.836127;
     }
 
-    public double ConvertsqyrdsTohectar()
+    public double ConvertsqyrdsTosqft(double SqYards)
     {
-        return (_SqYards * 0.836127)/10000;
+        return SqYards * 9;
+    }
+
+    public double ConvertsqyrdsTohectar(double SqYards)
+    {
+        return (SqYards * 0.836127)/10000;
     }
 
 }

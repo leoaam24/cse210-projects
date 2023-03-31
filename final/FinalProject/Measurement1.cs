@@ -75,34 +75,34 @@ public class Measurement1 : Conversion
         return m1UnitList;
     }
 
-    public double ConvertInchTocm()
+    public double ConvertInchTocm(double Inch)
     {
-        return _Inch * 2.54;
+        return Inch * 2.54;
     }
 
-    public double ConvertcmToInch()
+    public double ConvertcmToInch(double Centimeter)
     {
-        return _Centimeter * 0.393701;
+        return Centimeter * 0.393701;
     }
 
-    public double ConvercmTomm()
+    public double ConvercmTomm(double Centimeter)
     {
-        return _Centimeter * 10;
+        return Centimeter * 10;
     }
 
-    public double ConvertmmTocm()
+    public double ConvertmmTocm(double Millimeter)
     {
-        return _Millimeter / 10;
+        return Millimeter / 10;
     }
 
-    public double ConvertInchTomm()
+    public double ConvertInchTomm(double Inch)
     {
-        return _Inch * 25.4;
+        return Inch * 25.4;
     }
 
-    public double ConvertmmToInch()
+    public double ConvertmmToInch(double Millimeter)
     {
-        return _Millimeter / 25.4;
+        return Millimeter / 25.4;
     }
 
 

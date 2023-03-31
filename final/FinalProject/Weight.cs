@@ -86,62 +86,62 @@ public class Weight : Conversion
         return WUnitList;
     }
 
-    public double ConvertmgTog()
+    public double ConvertmgTog(double MilliGram)
     {
-        return _MilliGram / 1000;
+        return MilliGram / 1000;
     }
 
-    public double ConvertmgTokg()
+    public double ConvertmgTokg(double MilliGram)
     {
-        return _MilliGram / 1000000;
+        return MilliGram / 1000000;
     }
 
-    public double ConvertmgTolb()
+    public double ConvertmgTolb(double MilliGram)
     {
-        return (_MilliGram/1000) * 0.00220462;
+        return (MilliGram/1000) * 0.00220462;
     }
 
-    public double ConvergTomg()
+    public double ConvergTomg(double Gram)
     {
-        return _Gram * 1000;
+        return Gram * 1000;
     }
 
-    public double Convertgtokg()
+    public double Convertgtokg(double Gram)
     {
-        return _Gram / 1000;
+        return Gram / 1000;
     }
 
-    public double ConvertgTolb()
+    public double ConvertgTolb(double Gram)
     {
-        return _Gram / 453.59237;
+        return Gram / 453.59237;
     }  
-    public double ConvertkgTomg()
+    public double ConvertkgTomg(double Kilogram)
     {
-        return _Kilogram * 1000000;
+        return Kilogram * 1000000;
     }
     
-    public double ConvertkgTog()
+    public double ConvertkgTog(double Kilogram)
     {
-        return _Kilogram * 1000;
+        return Kilogram * 1000;
     }
-    public double ConvertkgTolb()
+    public double ConvertkgTolb(double Kilogram)
     {
-        return _Kilogram * 2.20462;
-    }
-
-    public double ConvertlbTomg()
-    {
-        return _Pounds * 453.59237 * 1000;
+        return Kilogram * 2.20462;
     }
 
-    public double ConvertlbTog()
+    public double ConvertlbTomg(double Pounds)
     {
-        return _Pounds * 453.59237;
+        return Pounds * 453.59237 * 1000;
     }
 
-    public double ConvertlbTokg()
+    public double ConvertlbTog(double Pounds)
     {
-        return _Pounds * 0.45359237;
+        return Pounds * 453.59237;
+    }
+
+    public double ConvertlbTokg(double Pounds)
+    {
+        return Pounds * 0.45359237;
     }
 
 

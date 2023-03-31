@@ -83,64 +83,64 @@ public class Measurement2 : Conversion
         return m2UnitList;
     }
 
-    public double ConvertfootTom()
+    public double ConvertfootTom(double Foot)
     {
-        return _Foot * 0.3048;
+        return Foot * 0.3048;
     }
 
-    public double ConvertfootToKilometer()
+    public double ConvertfootToKilometer(double Foot)
     {
-        return ((_Foot/3280.84)*1000);
+        return ((Foot/3280.84));
     }
 
-    public double ConvertfootTomiles()
+    public double ConvertfootTomiles(double Foot)
     {
-        return _Foot / 5280;
+        return Foot / 5280;
     }
 
-    public double ConvertmTofoot()
+    public double ConvertmTofoot(double Meter)
     {
-        return _Meter * 3.28084;
+        return Meter * 3.28084;
     }
 
-    public double ConvertmtoKilometers()
+    public double ConvertmtoKilometers(double Meter)
     {
-        return _Meter / 1000;
+        return Meter / 1000;
     }
 
-    public double ConvertmToMiles()
+    public double ConvertmToMiles(double Meter)
     {
-        return _Meter * 0.000621371;
+        return Meter * 0.000621371;
     }
 
-    public double ConvertKmTofoot()
+    public double ConvertKmTofoot(double Kilometer)
     {
-        return _Kilometer * 3280.84;
+        return Kilometer * 3280.84;
     }
 
-    public double ConvertKmTom()
+    public double ConvertKmTom(double Kilometer)
     {
-        return _Kilometer * 1000;
+        return Kilometer * 1000;
     }
 
-    public double ConvertKmToMi()
+    public double ConvertKmToMi(double Kilometer)
     {
-        return _Kilometer * 0.621371;
+        return Kilometer * 0.621371;
     }
 
-    public double ConvertmiTofoot()
+    public double ConvertmiTofoot(double Miles)
     {
-        return _Miles * 5280;
+        return Miles * 5280;
     }
 
-    public double ConvertmiTom()
+    public double ConvertmiTom(double Miles)
     {
-        return _Miles * 1609.34;
+        return Miles * 1609.34;
     }
 
-    public double ConvertmiToKm()
+    public double ConvertmiToKm(double Miles)
     {
-        return _Miles * 1.60934;
+        return Miles * 1.60934;
     }
 
 
