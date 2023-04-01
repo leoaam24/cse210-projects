@@ -1,9 +1,9 @@
 public class Weight : Conversion
 {
-    private double _MilliGram;
-    private double _Gram;
-    private double _Kilogram;
-    private double _Pounds;
+    private double _milliGram;
+    private double _gram;
+    private double _kiloGram;
+    private double _pounds;
 
 
     List<string> WUnitList = new List<string>();
@@ -16,10 +16,6 @@ public class Weight : Conversion
         WUnitList.Add("Pounds");
 
 
-    }
-    public override void Convert()
-    {
-        Console.WriteLine();
     }
 
     public override int conversionFrom()
@@ -62,21 +58,21 @@ public class Weight : Conversion
 
     public void setMilliGrams(double number)
     {
-        _MilliGram = number;
+        _milliGram = number;
     }
     public void setGram(double number)
     {
-        _Gram = number;
+        _gram = number;
     }
 
     public void setKiloGram(double number)
     {
-        _Kilogram = number;
+        _kiloGram = number;
     }
 
     public void setPounds(double number)
     {
-        _Pounds = number;
+        _pounds = number;
     }
 
     
@@ -86,60 +82,60 @@ public class Weight : Conversion
         return WUnitList;
     }
 
-    public double ConvertmgTog(double MilliGram)
+    public double ConvertMgToG(double MilliGram)
     {
         return MilliGram / 1000;
     }
 
-    public double ConvertmgTokg(double MilliGram)
+    public double ConvertMgToKg(double MilliGram)
     {
         return MilliGram / 1000000;
     }
 
-    public double ConvertmgTolb(double MilliGram)
+    public double ConvertMgToLb(double MilliGram)
     {
         return (MilliGram/1000) * 0.00220462;
     }
 
-    public double ConvergTomg(double Gram)
+    public double ConvertGToMg(double Gram)
     {
         return Gram * 1000;
     }
 
-    public double Convertgtokg(double Gram)
+    public double ConvertGtoKg(double Gram)
     {
         return Gram / 1000;
     }
 
-    public double ConvertgTolb(double Gram)
+    public double ConvertGToLb(double Gram)
     {
         return Gram / 453.59237;
     }  
-    public double ConvertkgTomg(double Kilogram)
+    public double ConvertKgToMg(double Kilogram)
     {
         return Kilogram * 1000000;
     }
     
-    public double ConvertkgTog(double Kilogram)
+    public double ConvertKgToG(double Kilogram)
     {
         return Kilogram * 1000;
     }
-    public double ConvertkgTolb(double Kilogram)
+    public double ConvertKgToLb(double Kilogram)
     {
         return Kilogram * 2.20462;
     }
 
-    public double ConvertlbTomg(double Pounds)
+    public double ConvertLbToMg(double Pounds)
     {
         return Pounds * 453.59237 * 1000;
     }
 
-    public double ConvertlbTog(double Pounds)
+    public double ConvertLbToG(double Pounds)
     {
         return Pounds * 453.59237;
     }
 
-    public double ConvertlbTokg(double Pounds)
+    public double ConvertLbToKg(double Pounds)
     {
         return Pounds * 0.45359237;
     }

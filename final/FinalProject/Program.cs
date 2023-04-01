@@ -46,7 +46,7 @@ class Program
                                 Console.Clear();
                                 string userPickToCF = (TempClass.getList())[0];
                                 double userInputCF = TempClass.fromEntry(userPickFromC);
-                                double resultCF = TempClass.ConvertCtoF(userInputCF);
+                                double resultCF = TempClass.convertCToF(userInputCF);
                                 TempClass.toEntry(userPickToCF, resultCF);
                                 break;
 
@@ -54,7 +54,7 @@ class Program
                                 Console.Clear();
                                 string userPickToCK = (TempClass.getList())[1];
                                 double userInputCK = TempClass.fromEntry(userPickFromC);
-                                double resultCK = TempClass.ConvertCtoK(userInputCK);
+                                double resultCK = TempClass.convertCToK(userInputCK);
                                 TempClass.toEntry(userPickToCK, resultCK);
                                 break;
                         }
@@ -70,7 +70,7 @@ class Program
                                 Console.Clear();
                                 string userPickToFC = (TempClass.getList())[0];
                                 double userInputFC = TempClass.fromEntry(userPickFromF);
-                                double resultFC = TempClass.ConvertFtoC(userInputFC);
+                                double resultFC = TempClass.convertFToC(userInputFC);
                                 TempClass.toEntry(userPickToFC, resultFC);
                                 break;
 
@@ -78,7 +78,7 @@ class Program
                                 Console.Clear();
                                 string userPickToFK = (TempClass.getList())[1];
                                 double userInputFK = TempClass.fromEntry(userPickFromF);
-                                double resultFK = TempClass.ConvertFtoK(userInputFK);
+                                double resultFK = TempClass.convertFToK(userInputFK);
                                 TempClass.toEntry(userPickToFK, resultFK);
                                 break;
                         }
@@ -94,7 +94,7 @@ class Program
                                 Console.Clear();
                                 string userPickToKC = (TempClass.getList())[0];
                                 double userInputKC = TempClass.fromEntry(userPickFromK);
-                                double resultKC = TempClass.ConvertKtoC(userInputKC);
+                                double resultKC = TempClass.convertKToC(userInputKC);
                                 TempClass.toEntry(userPickToKC, resultKC);
                                 break;
 
@@ -102,7 +102,7 @@ class Program
                                 Console.Clear();
                                 string userPickToKF = (TempClass.getList())[1];
                                 double userInputKF = TempClass.fromEntry(userPickFromK);
-                                double resultKF = TempClass.ConvertKtoF(userInputKF);
+                                double resultKF = TempClass.convertKToF(userInputKF);
                                 TempClass.toEntry(userPickToKF, resultKF);
                                 break;
                         }
@@ -136,7 +136,7 @@ class Program
                                 Console.Clear();
                                 string userPickToInMm = (M1Class.getList())[1];
                                 double userInputInMm = M1Class.fromEntry(userPickFromInch);
-                                double resultInMm = M1Class.ConvertInchTomm(userInputInMm);
+                                double resultInMm = M1Class.ConvertInchToMm(userInputInMm);
                                 M1Class.toEntry(userPickToInMm, resultInMm);
                                 break;
                         }
@@ -152,7 +152,7 @@ class Program
                                 Console.Clear();
                                 string userPickToCmIn = (M1Class.getList())[0];
                                 double userInputCmIn = M1Class.fromEntry(userPickFromCm);
-                                double resultCmIn = M1Class.ConvertcmToInch(userInputCmIn);
+                                double resultCmIn = M1Class.ConvertCmToInch(userInputCmIn);
                                 M1Class.toEntry(userPickToCmIn, resultCmIn);
                                 break;
 
@@ -160,7 +160,7 @@ class Program
                                 Console.Clear();
                                 string userPickToCmMm = (M1Class.getList())[1];
                                 double userInputCmMm = M1Class.fromEntry(userPickFromCm);
-                                double resultCmMm = M1Class.ConvercmTomm(userInputCmMm);
+                                double resultCmMm = M1Class.ConvertCmToMm(userInputCmMm);
                                 M1Class.toEntry(userPickToCmMm, resultCmMm);
                                 break;
                         }
@@ -176,7 +176,7 @@ class Program
                                 Console.Clear();
                                 string userPickToMmIn = (M1Class.getList())[0];
                                 double userInputMmIn = M1Class.fromEntry(userPickFromMm);
-                                double resultMmIn = M1Class.ConvertmmToInch(userInputMmIn);
+                                double resultMmIn = M1Class.ConvertMmToInch(userInputMmIn);
                                 M1Class.toEntry(userPickToMmIn, resultMmIn);
                                 break;
 
@@ -184,7 +184,7 @@ class Program
                                 Console.Clear();
                                 string userPickToMmCm = (M1Class.getList())[1];
                                 double userInputMmCm = M1Class.fromEntry(userPickFromMm);
-                                double resultMmCm = M1Class.ConvertmmTocm(userInputMmCm);
+                                double resultMmCm = M1Class.ConvertMmToCm(userInputMmCm);
                                 M1Class.toEntry(userPickToMmCm, resultMmCm);
                                 break;
                         }
@@ -210,7 +210,7 @@ class Program
                                 Console.Clear();
                                 string userPickToFtM = (M2Class.getList())[0];
                                 double userInputFtM = M2Class.fromEntry(userPickFromFt);
-                                double resultFtM = M2Class.ConvertfootTom(userInputFtM);
+                                double resultFtM = M2Class.ConvertFootToM(userInputFtM);
                                 M2Class.toEntry(userPickToFtM, resultFtM);
                                 break;
 
@@ -218,14 +218,14 @@ class Program
                                 Console.Clear();
                                 string userPickToFtKm = (M2Class.getList())[1];
                                 double userInputFtKm = M2Class.fromEntry(userPickFromFt);
-                                double resultFtKm = M2Class.ConvertfootToKilometer(userInputFtKm);
+                                double resultFtKm = M2Class.ConvertFootToKilometer(userInputFtKm);
                                 M2Class.toEntry(userPickToFtKm, resultFtKm);
                                 break;
                             case 3: // Foot to Miles
                                 Console.Clear();
                                 string userPickToFtMi = (M2Class.getList())[2];
                                 double userInputFtMi = M2Class.fromEntry(userPickFromFt);
-                                double resultFtMi = M2Class.ConvertfootTomiles(userInputFtMi);
+                                double resultFtMi = M2Class.ConvertFootToMiles(userInputFtMi);
                                 M2Class.toEntry(userPickToFtMi, resultFtMi);
                                 break;
                         }
@@ -241,7 +241,7 @@ class Program
                                 Console.Clear();
                                 string userPickToMF = (M2Class.getList())[0];
                                 double userInputMF = M2Class.fromEntry(userPickFromM);
-                                double resultMF = M2Class.ConvertmTofoot(userInputMF);
+                                double resultMF = M2Class.ConvertMToFoot(userInputMF);
                                 M2Class.toEntry(userPickToMF, resultMF);
                                 break;
 
@@ -249,14 +249,14 @@ class Program
                                 Console.Clear();
                                 string userPickToMKm = (M2Class.getList())[1];
                                 double userInputMKm= M2Class.fromEntry(userPickFromM);
-                                double resultMKm = M2Class.ConvertmtoKilometers(userInputMKm);
+                                double resultMKm = M2Class.ConvertMToKilometers(userInputMKm);
                                 M2Class.toEntry(userPickToMKm, resultMKm);
                                 break;
                             case 3: // Meter to Miles
                                 Console.Clear();
                                 string userPickToMMi= (M2Class.getList())[1];
                                 double userInputMMi= M2Class.fromEntry(userPickFromM);
-                                double resultMMi = M2Class.ConvertmToMiles(userInputMMi);
+                                double resultMMi = M2Class.ConvertMToMiles(userInputMMi);
                                 M2Class.toEntry(userPickToMMi, resultMMi);
                                 break;
                         }
@@ -272,7 +272,7 @@ class Program
                                 Console.Clear();
                                 string userPickToKmFt = (M2Class.getList())[0];
                                 double userInputKmFt = M2Class.fromEntry(userPickFromKm);
-                                double resultKmFt= M2Class.ConvertKmTofoot(userInputKmFt);
+                                double resultKmFt= M2Class.ConvertKmToFoot(userInputKmFt);
                                 M2Class.toEntry(userPickToKmFt, resultKmFt);
                                 break;
 
@@ -280,7 +280,7 @@ class Program
                                 Console.Clear();
                                 string userPickToKmM = (M2Class.getList())[1];
                                 double userInputKmM = M2Class.fromEntry(userPickFromKm);
-                                double resultKmM  = M2Class.ConvertKmTom(userInputKmM);
+                                double resultKmM  = M2Class.ConvertKmToM(userInputKmM);
                                 M2Class.toEntry(userPickToKmM , resultKmM );
                                 break;
                             case 3: // Kilometer to Miles
@@ -303,7 +303,7 @@ class Program
                                 Console.Clear();
                                 string userPickToMiFt = (M2Class.getList())[0];
                                 double userInputMiFt = M2Class.fromEntry(userPickFromMi);
-                                double resultMiFt= M2Class.ConvertmiTofoot(userInputMiFt);
+                                double resultMiFt= M2Class.ConvertMiToFoot(userInputMiFt);
                                 M2Class.toEntry(userPickToMiFt, resultMiFt);
                                 break;
 
@@ -311,7 +311,7 @@ class Program
                                 Console.Clear();
                                 string userPickToMiM = (M2Class.getList())[1];
                                 double userInputMiM = M2Class.fromEntry(userPickFromMi);
-                                double resultMiM = M2Class.ConvertmiTom(userInputMiM);
+                                double resultMiM = M2Class.ConvertMiToM(userInputMiM);
                                 M2Class.toEntry(userPickToMiM , resultMiM);
                                 break;
 
@@ -319,7 +319,7 @@ class Program
                                 Console.Clear();
                                 string userPickToMiKm = (M2Class.getList())[2];
                                 double userInputMiKm = M2Class.fromEntry(userPickFromMi);
-                                double resultMiKm = M2Class.ConvertmiToKm(userInputMiKm);
+                                double resultMiKm = M2Class.ConvertMiToKm(userInputMiKm);
                                 M2Class.toEntry(userPickToMiKm , resultMiKm);
                                 break;
                         }
@@ -344,7 +344,7 @@ class Program
                                 Console.Clear();
                                 string userPickToMgGm = (WClass.getList())[0];
                                 double userInputMgGm = WClass.fromEntry(userPickFromMg);
-                                double resultMgGm = WClass.ConvertmgTog(userInputMgGm);
+                                double resultMgGm = WClass.ConvertMgToG(userInputMgGm);
                                 WClass.toEntry(userPickToMgGm, resultMgGm);
                                 break;
 
@@ -352,14 +352,14 @@ class Program
                                 Console.Clear();
                                 string userPickToMgKg = (WClass.getList())[1];
                                 double userInputMgKg = WClass.fromEntry(userPickFromMg);
-                                double resultMgKg = WClass.ConvertmgTokg(userInputMgKg);
+                                double resultMgKg = WClass.ConvertMgToKg(userInputMgKg);
                                 WClass.toEntry(userPickToMgKg, resultMgKg);
                                 break;
                             case 3: // Milligrams to Pounds
                                 Console.Clear();
                                 string userPickToMgLb = (WClass.getList())[2];
                                 double userInputMgLb = WClass.fromEntry(userPickFromMg);
-                                double resultMgLb = WClass.ConvertmgTolb(userInputMgLb);
+                                double resultMgLb = WClass.ConvertMgToLb(userInputMgLb);
                                 WClass.toEntry(userPickToMgLb, resultMgLb);
                                 break;
                         }
@@ -375,7 +375,7 @@ class Program
                                 Console.Clear();
                                 string userPickToGMg = (WClass.getList())[0];
                                 double userInputGMg = WClass.fromEntry(userPickFromG);
-                                double resultGMg = WClass.ConvergTomg(userInputGMg);
+                                double resultGMg = WClass.ConvertGToMg(userInputGMg);
                                 WClass.toEntry(userPickToGMg, resultGMg);
                                 break;
 
@@ -383,14 +383,14 @@ class Program
                                 Console.Clear();
                                 string userPickToGKg= (WClass.getList())[1];
                                 double userInputGKg= WClass.fromEntry(userPickFromG);
-                                double resultGKg = WClass.Convertgtokg(userInputGKg);
+                                double resultGKg = WClass.ConvertGtoKg(userInputGKg);
                                 WClass.toEntry(userPickToGKg, resultGKg);
                                 break;
                             case 3: // Grams to Pounds
                                 Console.Clear();
                                 string userPickToGLb= (WClass.getList())[1];
                                 double userInputGLb= WClass.fromEntry(userPickFromG);
-                                double resultGLb = WClass.ConvertgTolb(userInputGLb);
+                                double resultGLb = WClass.ConvertGToLb(userInputGLb);
                                 WClass.toEntry(userPickToGLb, resultGLb);
                                 break;
                         }
@@ -406,7 +406,7 @@ class Program
                                 Console.Clear();
                                 string userPickToKmMg = (WClass.getList())[0];
                                 double userInputKmMg = WClass.fromEntry(userPickFromKg);
-                                double resultKmMg= WClass.ConvertkgTomg(userInputKmMg);
+                                double resultKmMg= WClass.ConvertKgToMg(userInputKmMg);
                                 WClass.toEntry(userPickToKmMg, resultKmMg);
                                 break;
 
@@ -414,14 +414,14 @@ class Program
                                 Console.Clear();
                                 string userPickToKgG = (WClass.getList())[1];
                                 double userInputKgG = WClass.fromEntry(userPickFromKg);
-                                double resultKgG  = WClass.ConvertkgTog(userInputKgG);
+                                double resultKgG  = WClass.ConvertKgToG(userInputKgG);
                                 WClass.toEntry(userPickToKgG , resultKgG );
                                 break;
                             case 3: // Kilograms to Pounds
                                 Console.Clear();
                                 string userPickToKgLb = (WClass.getList())[2];
                                 double userInputKgLb = WClass.fromEntry(userPickFromKg);
-                                double resultKgLb  = WClass.ConvertkgTolb(userInputKgLb);
+                                double resultKgLb  = WClass.ConvertKgToLb(userInputKgLb);
                                 WClass.toEntry(userPickToKgLb , resultKgLb);
                                 break;
                         }
@@ -437,7 +437,7 @@ class Program
                                 Console.Clear();
                                 string userPickToLbMg = (WClass.getList())[0];
                                 double userInputLbMg = WClass.fromEntry(userPickFromLb);
-                                double resultLbMg= WClass.ConvertlbTomg(userInputLbMg);
+                                double resultLbMg= WClass.ConvertLbToMg(userInputLbMg);
                                 WClass.toEntry(userPickToLbMg, resultLbMg);
                                 break;
 
@@ -445,7 +445,7 @@ class Program
                                 Console.Clear();
                                 string userPickToLbG = (WClass.getList())[1];
                                 double userInputLbG = WClass.fromEntry(userPickFromLb);
-                                double resultLbG = WClass.ConvertlbTog(userInputLbG);
+                                double resultLbG = WClass.ConvertLbToG(userInputLbG);
                                 WClass.toEntry(userPickToLbG , resultLbG);
                                 break;
 
@@ -453,7 +453,7 @@ class Program
                                 Console.Clear();
                                 string userPickToLbKg = (WClass.getList())[2];
                                 double userInputLbKg = WClass.fromEntry(userPickFromLb);
-                                double resultLbKg = WClass.ConvertlbTokg(userInputLbKg);
+                                double resultLbKg = WClass.ConvertLbToKg(userInputLbKg);
                                 WClass.toEntry(userPickToLbKg , resultLbKg);
                                 break;
                         }
@@ -486,14 +486,14 @@ class Program
                                 Console.Clear();
                                 string userPickToSqmH = (AClass.getList())[1];
                                 double userInputSqmH = AClass.fromEntry(userPickFromSqm);
-                                double resultSqmH = AClass.ConvertsqmTohectar(userInputSqmH);
+                                double resultSqmH = AClass.ConvertSqmToHectar(userInputSqmH);
                                 AClass.toEntry(userPickToSqmH, resultSqmH);
                                 break;
                             case 3: // Square Meter to Square Yards
                                 Console.Clear();
                                 string userPickToSqmSqY = (AClass.getList())[2];
                                 double userInputSqmSqY = AClass.fromEntry(userPickFromSqm);
-                                double resultSqmSqY = AClass.ConvertsqmTosqyrds(userInputSqmSqY);
+                                double resultSqmSqY = AClass.ConvertSqmToSqyrds(userInputSqmSqY);
                                 AClass.toEntry(userPickToSqmSqY, resultSqmSqY);
                                 break;
                         }
@@ -509,7 +509,7 @@ class Program
                                 Console.Clear();
                                 string userPickToSqFtSqm = (AClass.getList())[0];
                                 double userInputSqFtSqm = AClass.fromEntry(userPickFromSqFt);
-                                double resultSqFtSqm = AClass.ConvertsqftTosqm(userInputSqFtSqm);
+                                double resultSqFtSqm = AClass.ConvertSqftToSqm(userInputSqFtSqm);
                                 AClass.toEntry(userPickToSqFtSqm, resultSqFtSqm);
                                 break;
 
@@ -517,14 +517,14 @@ class Program
                                 Console.Clear();
                                 string userPickToSqFtH= (AClass.getList())[1];
                                 double userInputSqFtH= AClass.fromEntry(userPickFromSqFt);
-                                double resultSqFtH = AClass.Convertsqfttohectar(userInputSqFtH);
+                                double resultSqFtH = AClass.ConvertSqftToHectar(userInputSqFtH);
                                 AClass.toEntry(userPickToSqFtH, resultSqFtH);
                                 break;
                             case 3: // Square Foot to Square Yards
                                 Console.Clear();
                                 string userPickToSqFtSqY= (AClass.getList())[2];
                                 double userInputSqFtSqY= AClass.fromEntry(userPickFromSqFt);
-                                double resultSqFtSqY = AClass.ConvertsqftTosqyrds(userInputSqFtSqY);
+                                double resultSqFtSqY = AClass.ConvertSqftToSqyrds(userInputSqFtSqY);
                                 AClass.toEntry(userPickToSqFtSqY, resultSqFtSqY);
                                 break;
                         }
@@ -538,17 +538,17 @@ class Program
                         {
                             case 1: // Hectares to Square Meters
                                 Console.Clear();
-                                string userPickToHSqm = (AClass.getList())[1];
+                                string userPickToHSqm = (AClass.getList())[0];
                                 double userInputHSqm = AClass.fromEntry(userPickFromH);
-                                double resultHSqm  = AClass.ConverthectarTosqm(userInputHSqm);
+                                double resultHSqm  = AClass.ConvertHectarToSqm(userInputHSqm);
                                 AClass.toEntry(userPickToHSqm , resultHSqm);
                                 break;
 
                             case 2: // Hectares to Square Foot
                                 Console.Clear();
-                                string userPickToHSqFt = (AClass.getList())[0];
+                                string userPickToHSqFt = (AClass.getList())[1];
                                 double userInputHSqFt = AClass.fromEntry(userPickFromH);
-                                double resultHSqFt= AClass.ConverthectarTosqft(userInputHSqFt);
+                                double resultHSqFt= AClass.ConvertHectarToSqft(userInputHSqFt);
                                 AClass.toEntry(userPickToHSqFt, resultHSqFt);
                                 break;
 
@@ -556,7 +556,7 @@ class Program
                                 Console.Clear();
                                 string userPickToHSqY = (AClass.getList())[2];
                                 double userInputHSqY = AClass.fromEntry(userPickFromH);
-                                double resultHSqY  = AClass.ConverthectarTosqyrds(userInputHSqY);
+                                double resultHSqY  = AClass.ConvertHectarToSqyrds(userInputHSqY);
                                 AClass.toEntry(userPickToHSqY , resultHSqY);
                                 break;
                         }
@@ -572,7 +572,7 @@ class Program
                                 Console.Clear();
                                 string userPickToSqYSqM = (AClass.getList())[0];
                                 double userInputSqYSqM = AClass.fromEntry(userPickFromSqY);
-                                double resultSqYSqM = AClass.ConvertsqyrdsTosqm(userInputSqYSqM);
+                                double resultSqYSqM = AClass.ConvertSqyrdsToSqm(userInputSqYSqM);
                                 AClass.toEntry(userPickToSqYSqM , resultSqYSqM);
                                 break;
 
@@ -580,7 +580,7 @@ class Program
                                 Console.Clear();
                                 string userPickToSqYSqFt = (AClass.getList())[1];
                                 double userInputSqYSqFt = AClass.fromEntry(userPickFromSqY);
-                                double resultSqYSqFt= AClass.ConvertsqyrdsTosqft(userInputSqYSqFt);
+                                double resultSqYSqFt= AClass.ConvertSqyrdsToSqft(userInputSqYSqFt);
                                 AClass.toEntry(userPickToSqYSqFt, resultSqYSqFt);
                                 break;
 
@@ -588,7 +588,7 @@ class Program
                                 Console.Clear();
                                 string userPickToSqYH = (AClass.getList())[2];
                                 double userInputSqYH = AClass.fromEntry(userPickFromSqY);
-                                double resultSqYH = AClass.ConvertsqyrdsTohectar(userInputSqYH);
+                                double resultSqYH = AClass.ConvertSqyrdsToHectar(userInputSqYH);
                                 AClass.toEntry(userPickToSqYH, resultSqYH);
                                 break;
                         }

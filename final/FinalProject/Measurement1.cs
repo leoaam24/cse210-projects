@@ -1,8 +1,8 @@
 public class Measurement1 : Conversion
 {
-    private double _Inch;
-    private double _Centimeter;
-    private double _Millimeter;
+    private double _inch;
+    private double _centiMeter;
+    private double _milliMeter;
 
     List<string> m1UnitList = new List<string>();
 
@@ -12,10 +12,7 @@ public class Measurement1 : Conversion
         m1UnitList.Add("Centimeter");
         m1UnitList.Add("Millimeter");
     }
-    public override void Convert()
-    {
-        Console.WriteLine();
-    }
+
 
     public override int conversionFrom()
     {
@@ -57,17 +54,17 @@ public class Measurement1 : Conversion
 
     public void setInches(double number)
     {
-        _Inch = number;
+        _inch = number;
     }
 
     public void setCentimeter(double number)
     {
-        _Centimeter = number;
+        _centiMeter = number;
     }
 
     public void setMillimeter(double number)
     {
-        _Millimeter = number;
+        _milliMeter = number;
     }
 
     public List<string> getList()
@@ -80,27 +77,27 @@ public class Measurement1 : Conversion
         return Inch * 2.54;
     }
 
-    public double ConvertcmToInch(double Centimeter)
+    public double ConvertCmToInch(double Centimeter)
     {
         return Centimeter * 0.393701;
     }
 
-    public double ConvercmTomm(double Centimeter)
+    public double ConvertCmToMm(double Centimeter)
     {
         return Centimeter * 10;
     }
 
-    public double ConvertmmTocm(double Millimeter)
+    public double ConvertMmToCm(double Millimeter)
     {
         return Millimeter / 10;
     }
 
-    public double ConvertInchTomm(double Inch)
+    public double ConvertInchToMm(double Inch)
     {
         return Inch * 25.4;
     }
 
-    public double ConvertmmToInch(double Millimeter)
+    public double ConvertMmToInch(double Millimeter)
     {
         return Millimeter / 25.4;
     }

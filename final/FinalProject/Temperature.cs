@@ -1,8 +1,8 @@
 public class Temperature : Conversion
 {
-    private double _Celsius;
-    private double _Fahrenheit;
-    private double _Kelvin;
+    private double _celsius;
+    private double _fahrenhiet;
+    private double _kelvin;
 
     List<string> tempUnitList = new List<string>();
 
@@ -11,10 +11,6 @@ public class Temperature : Conversion
         tempUnitList.Add("Celsius");
         tempUnitList.Add("Fahrenheit");
         tempUnitList.Add("Kelvin");
-    }
-    public override void Convert()
-    {
-        Console.WriteLine();
     }
 
     public override int conversionFrom()
@@ -56,32 +52,32 @@ public class Temperature : Conversion
     }
 
 
-    public double ConvertCtoF(double Celsius)
+    public double convertCToF(double Celsius)
     {
         return ((Celsius)*1.8) + 32;  
     }
 
-    public double ConvertCtoK(double Celsius)
+    public double convertCToK(double Celsius)
     {
         return ((Celsius) + 273.15);
     }
 
-    public double ConvertFtoC(double Fahrenheit)
+    public double convertFToC(double Fahrenheit)
     {
         return ((Fahrenheit - 32)* 5/9);
     }
 
-    public double ConvertFtoK(double Fahrenheit)
+    public double convertFToK(double Fahrenheit)
     {
         return (((Fahrenheit) + 459.67)*5/9);
     }
 
-    public double ConvertKtoC(double Kelvin)
+    public double convertKToC(double Kelvin)
     {
         return (Kelvin - 273.15);
     }
 
-    public double ConvertKtoF(double Kelvin)
+    public double convertKToF(double Kelvin)
     {
         double celsius = Kelvin - 273.15;
         return (celsius * 9/5) + 32;
@@ -90,17 +86,17 @@ public class Temperature : Conversion
 
     public void SetCelsius(double input)
     {
-        _Celsius = input;
+        _celsius = input;
     }
 
     public void SetFahrenheit(double input)
     {
-        _Fahrenheit = input;
+        _fahrenhiet = input;
     }
     
     public void SetKelvin(double input)
     {
-        _Kelvin = input;
+        _kelvin = input;
     }
 
     public List<string> getList()

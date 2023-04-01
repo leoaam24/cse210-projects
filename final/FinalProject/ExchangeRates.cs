@@ -17,10 +17,12 @@ public class Forexechange
     }
     public async Task GetValues(string currency_code_from, string currency_code_to)
     {
+        // API is only free account. There are 1400 requests left before it runs out of tries. 
+        // Requests are made from the time user input after convert to prompt.
         string code = currency_code_from;
         using var client = new HttpClient();
-        var Listrates = new List<KeyValuePair<string, decimal>>();
-        var url = $"https://v6.exchangerate-api.com/v6/0c25af477203b62b98b0bfd3/latest/{code}";
+        var listRates = new List<KeyValuePair<string, decimal>>();
+        var url = $"https://v6.exchangerate-api.com/v6/0c25af477203b62b98b0bfd3/latest/{code}"; 
         var response = await client.GetAsync(url);
 
         if (response.IsSuccessStatusCode)
@@ -33,10 +35,10 @@ public class Forexechange
             foreach (var rate in rateObjects.EnumerateObject())
             {
                 var kvp = new KeyValuePair<string, decimal>(rate.Name, rate.Value.GetDecimal());
-                Listrates.Add(kvp);
+                listRates.Add(kvp);
             }
 
-            foreach (var rate in Listrates)
+            foreach (var rate in listRates)
             {  
                 string rateKey = (rate.Key).ToString();
                 if (rateKey == currency_code_to)

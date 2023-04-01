@@ -1,9 +1,9 @@
 public class Measurement2 : Conversion
 {
-    private double _Foot;
-    private double _Meter;
-    private double _Kilometer;
-    private double _Miles;
+    private double _foot;
+    private double _meter;
+    private double _kiloMeter;
+    private double _miles;
 
     List<string> m2UnitList = new List<string>();
 
@@ -14,10 +14,6 @@ public class Measurement2 : Conversion
         m2UnitList.Add("Kilometer");
         m2UnitList.Add("Miles");
 
-    }
-    public override void Convert()
-    {
-        Console.WriteLine();
     }
 
     public override int conversionFrom()
@@ -60,22 +56,22 @@ public class Measurement2 : Conversion
 
     public void setFoot(double number)
     {
-        _Foot = number;
+        _foot = number;
     }
 
     public void setMeter(double number)
     {
-        _Meter = number;
+        _meter = number;
     }
 
     public void setKilometer(double number)
     {
-        _Kilometer = number;
+        _kiloMeter = number;
     }
 
     public void setMiles(double number)
     {
-        _Miles = number;
+        _miles = number;
     }
 
     public List<string> getList()
@@ -83,42 +79,42 @@ public class Measurement2 : Conversion
         return m2UnitList;
     }
 
-    public double ConvertfootTom(double Foot)
+    public double ConvertFootToM(double Foot)
     {
         return Foot * 0.3048;
     }
 
-    public double ConvertfootToKilometer(double Foot)
+    public double ConvertFootToKilometer(double Foot)
     {
         return ((Foot/3280.84));
     }
 
-    public double ConvertfootTomiles(double Foot)
+    public double ConvertFootToMiles(double Foot)
     {
         return Foot / 5280;
     }
 
-    public double ConvertmTofoot(double Meter)
+    public double ConvertMToFoot(double Meter)
     {
         return Meter * 3.28084;
     }
 
-    public double ConvertmtoKilometers(double Meter)
+    public double ConvertMToKilometers(double Meter)
     {
         return Meter / 1000;
     }
 
-    public double ConvertmToMiles(double Meter)
+    public double ConvertMToMiles(double Meter)
     {
         return Meter * 0.000621371;
     }
 
-    public double ConvertKmTofoot(double Kilometer)
+    public double ConvertKmToFoot(double Kilometer)
     {
         return Kilometer * 3280.84;
     }
 
-    public double ConvertKmTom(double Kilometer)
+    public double ConvertKmToM(double Kilometer)
     {
         return Kilometer * 1000;
     }
@@ -128,17 +124,17 @@ public class Measurement2 : Conversion
         return Kilometer * 0.621371;
     }
 
-    public double ConvertmiTofoot(double Miles)
+    public double ConvertMiToFoot(double Miles)
     {
         return Miles * 5280;
     }
 
-    public double ConvertmiTom(double Miles)
+    public double ConvertMiToM(double Miles)
     {
         return Miles * 1609.34;
     }
 
-    public double ConvertmiToKm(double Miles)
+    public double ConvertMiToKm(double Miles)
     {
         return Miles * 1.60934;
     }

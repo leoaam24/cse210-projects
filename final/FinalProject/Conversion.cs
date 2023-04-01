@@ -1,6 +1,5 @@
 public abstract class Conversion
 {
-    public abstract void Convert();
 
     public abstract int conversionFrom();
 

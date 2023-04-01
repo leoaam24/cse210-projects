@@ -1,9 +1,9 @@
 public class Area : Conversion
 {
-    private double _SquareM;
-    private double _SquareFt;
-    private double _Hectares;
-    private double _SqYards;
+    private double _squareMeter;
+    private double _squareFoot;
+    private double _hectares;
+    private double _squareYards;
 
 
     List<string> AUnitList = new List<string>();
@@ -16,10 +16,6 @@ public class Area : Conversion
         AUnitList.Add("Square Yard");
 
 
-    }
-    public override void Convert()
-    {
-        Console.WriteLine();
     }
 
     public override int conversionFrom()
@@ -62,21 +58,21 @@ public class Area : Conversion
 
     public void setSquareM(double number)
     {
-        _SquareM = number;
+        _squareMeter = number;
     }
     public void setSquareFt(double number)
     {
-        _SquareFt = number;
+        _squareFoot = number;
     }
 
     public void setHectar(double number)
     {
-        _Hectares = number;
+        _hectares = number;
     }
 
-    public void setSqYards(double number)
+    public void setSqyards(double number)
     {
-        _SqYards = number;
+        _squareYards = number;
     }
 
     public List<string> getList()
@@ -89,56 +85,56 @@ public class Area : Conversion
         return (SquareM * 10.7639);
     }
 
-    public double ConvertsqmTohectar(double SquareM)
+    public double ConvertSqmToHectar(double SquareM)
     {
         return SquareM / 10000;
     }
 
-    public double ConvertsqmTosqyrds(double SquareM)
+    public double ConvertSqmToSqyrds(double SquareM)
     {
         return SquareM * 1.19599;
     }
 
-    public double ConvertsqftTosqm(double SquareFt)
+    public double ConvertSqftToSqm(double SquareFt)
     {
         return SquareFt * 0.092903;
     }
 
-    public double Convertsqfttohectar(double SquareFt)
+    public double ConvertSqftToHectar(double SquareFt)
     {
         return SquareFt * 0.0000092903;
     }
 
-    public double ConvertsqftTosqyrds(double SquareFt)
+    public double ConvertSqftToSqyrds(double SquareFt)
     {
         return SquareFt / 9;
     }
-    public double ConverthectarTosqm(double Hectares)
+    public double ConvertHectarToSqm(double Hectares)
     {
         return Hectares * 10000;
     }
 
-    public double ConverthectarTosqft(double Hectares)
+    public double ConvertHectarToSqft(double Hectares)
     {
         return Hectares * 107639.1;
     }
 
-    public double ConverthectarTosqyrds(double Hectares)
+    public double ConvertHectarToSqyrds(double Hectares)
     {
         return Hectares * 11959.9;
     }
 
-    public double ConvertsqyrdsTosqm(double SqYards)
+    public double ConvertSqyrdsToSqm(double SqYards)
     {
         return SqYards * 0.836127;
     }
 
-    public double ConvertsqyrdsTosqft(double SqYards)
+    public double ConvertSqyrdsToSqft(double SqYards)
     {
         return SqYards * 9;
     }
 
-    public double ConvertsqyrdsTohectar(double SqYards)
+    public double ConvertSqyrdsToHectar(double SqYards)
     {
         return (SqYards * 0.836127)/10000;
     }
