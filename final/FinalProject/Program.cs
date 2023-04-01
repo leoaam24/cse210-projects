@@ -522,7 +522,7 @@ class Program
                                 break;
                             case 3: // Square Foot to Square Yards
                                 Console.Clear();
-                                string userPickToSqFtSqY= (AClass.getList())[1];
+                                string userPickToSqFtSqY= (AClass.getList())[2];
                                 double userInputSqFtSqY= AClass.fromEntry(userPickFromSqFt);
                                 double resultSqFtSqY = AClass.ConvertsqftTosqyrds(userInputSqFtSqY);
                                 AClass.toEntry(userPickToSqFtSqY, resultSqFtSqY);
@@ -536,7 +536,15 @@ class Program
 
                         switch (conversionTo)
                         {
-                            case 1: // Hectares to Square Foot
+                            case 1: // Hectares to Square Meters
+                                Console.Clear();
+                                string userPickToHSqm = (AClass.getList())[1];
+                                double userInputHSqm = AClass.fromEntry(userPickFromH);
+                                double resultHSqm  = AClass.ConverthectarTosqm(userInputHSqm);
+                                AClass.toEntry(userPickToHSqm , resultHSqm);
+                                break;
+
+                            case 2: // Hectares to Square Foot
                                 Console.Clear();
                                 string userPickToHSqFt = (AClass.getList())[0];
                                 double userInputHSqFt = AClass.fromEntry(userPickFromH);
@@ -544,13 +552,6 @@ class Program
                                 AClass.toEntry(userPickToHSqFt, resultHSqFt);
                                 break;
 
-                            case 2: // Hectares to Square Meters
-                                Console.Clear();
-                                string userPickToHSqm = (AClass.getList())[1];
-                                double userInputHSqm = AClass.fromEntry(userPickFromH);
-                                double resultHSqm  = AClass.ConverthectarTosqm(userInputHSqm);
-                                AClass.toEntry(userPickToHSqm , resultHSqm);
-                                break;
                             case 3: // Hectares to Square Yards
                                 Console.Clear();
                                 string userPickToHSqY = (AClass.getList())[2];
@@ -567,20 +568,20 @@ class Program
 
                         switch (conversionTo)
                         {
-                            case 1: // Square Yards to Square Foot
+                            case 1: // Square Yards to Square Meter
                                 Console.Clear();
-                                string userPickToSqYSqFt = (AClass.getList())[0];
-                                double userInputSqYSqFt = AClass.fromEntry(userPickFromSqY);
-                                double resultSqYSqFt= AClass.ConvertsqyrdsTosqft(userInputSqYSqFt);
-                                AClass.toEntry(userPickToSqYSqFt, resultSqYSqFt);
-                                break;
-
-                            case 2: // Square Yards to Square Meter
-                                Console.Clear();
-                                string userPickToSqYSqM = (AClass.getList())[1];
+                                string userPickToSqYSqM = (AClass.getList())[0];
                                 double userInputSqYSqM = AClass.fromEntry(userPickFromSqY);
                                 double resultSqYSqM = AClass.ConvertsqyrdsTosqm(userInputSqYSqM);
                                 AClass.toEntry(userPickToSqYSqM , resultSqYSqM);
+                                break;
+
+                            case 2: // Square Yards to Square Foot
+                                Console.Clear();
+                                string userPickToSqYSqFt = (AClass.getList())[1];
+                                double userInputSqYSqFt = AClass.fromEntry(userPickFromSqY);
+                                double resultSqYSqFt= AClass.ConvertsqyrdsTosqft(userInputSqYSqFt);
+                                AClass.toEntry(userPickToSqYSqFt, resultSqYSqFt);
                                 break;
 
                             case 3: // Square Yards to Hectar
